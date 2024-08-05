@@ -1,0 +1,1 @@
+C:\Users\Lsv\Documents\GitHub\AR-EMHotels\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\1xn2m1l7\obj\arm64-v8a
