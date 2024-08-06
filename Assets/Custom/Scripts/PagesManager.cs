@@ -17,8 +17,13 @@ public class PagesManager : MonoBehaviour
 
     public void ChangePage()
     {
-        pageToShow.SetActive(true);
-        pageToHide.SetActive(false);
+        if (pageToShow) {
+            pageToShow.SetActive(true);
+        }
+        if (pageToHide)
+        {
+            pageToHide.SetActive(false);
+        }
     }
 
     public void Quit()
