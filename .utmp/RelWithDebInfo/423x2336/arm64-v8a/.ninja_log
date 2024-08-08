@@ -1,0 +1,10 @@
+# ninja log v5
+91	3781	7448338635982610	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	15d01ed332b2ea32
+120	3918	7448338637146969	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	eebaf6d9f92b7ba
+31	3965	7448338637332525	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	607c0affc8773f11
+56	4114	7448338639170483	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8b33218baf2708e8
+106	4327	7448338641225791	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	562c3e4db3f64b17
+1	4386	7448338641710866	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ff9d7d1f9670852b
+69	4776	7448338646102415	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a3ebfe0ee34067f5
+23	5082	7448338649077921	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3c5619053dc73a6e
+5083	5317	7448338651589316	C:/Users/Lsv/Documents/GitHub/AR-New-EMHotels-APP/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/423x2336/obj/arm64-v8a/libgame.so	74931216c19c5e6b
