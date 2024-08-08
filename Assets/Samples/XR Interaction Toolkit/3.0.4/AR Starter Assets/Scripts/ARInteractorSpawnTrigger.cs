@@ -155,6 +155,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             // Wait a frame after the Spawn Object input is triggered to actually cast against AR planes and spawn
             // in order to ensure the touchscreen gestures have finished processing to allow the ray pose driver
             // to update the pose based on the touch position of the gestures.
+            Transform[] objectSpawnerChildren = m_ObjectSpawner.GetComponentsInChildren<Transform>();
+            
             if (m_AttemptSpawn)
             {
                 m_AttemptSpawn = false;
@@ -169,7 +171,11 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
                     if (m_RequireHorizontalUpSurface && arPlane.alignment != PlaneAlignment.HorizontalUp)
                         return;
 
-                    m_ObjectSpawner.TrySpawnObject(arRaycastHit.pose.position, arPlane.normal);
+
+                    if (objectSpawnerChildren.Length <= 1)
+                    {
+                        m_ObjectSpawner.TrySpawnObject(arRaycastHit.pose.position, arPlane.normal);
+                    }
                 }
 
                 return;

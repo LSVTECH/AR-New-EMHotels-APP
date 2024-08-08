@@ -30,6 +30,14 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The list of prefabs available to spawn.")]
         List<GameObject> m_ObjectPrefabs = new List<GameObject>();
 
+        [SerializeField]
+        [Tooltip("The list of Cartagena Plaza available to spawn.")]
+        List<GameObject> m_ObjectCartagenaPlaza = new List<GameObject>();
+
+        [SerializeField]
+        [Tooltip("The list of Andez Plaza available to spawn.")]
+        List<GameObject> m_ObjectAndezPlaza = new List<GameObject>();
+
         /// <summary>
         /// The list of prefabs available to spawn.
         /// </summary>
@@ -37,6 +45,17 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ObjectPrefabs;
             set => m_ObjectPrefabs = value;
+        }
+        
+        public List<GameObject> objectCartagenaPlaza
+        {
+            get => m_ObjectCartagenaPlaza;
+            set => m_ObjectCartagenaPlaza = value;
+        }
+        public List<GameObject> objectAndezPlaza
+        {
+            get => m_ObjectAndezPlaza;
+            set => m_ObjectAndezPlaza = value;
         }
 
         [SerializeField]
@@ -206,8 +225,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
             var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
-            if (m_SpawnAsChildren)
-                newObject.transform.parent = transform;
+            
+            Transform[] objectSpawnerChildren = transform.GetComponentsInChildren<Transform>();
+            newObject.transform.parent = transform;
 
             newObject.transform.position = spawnPoint;
             EnsureFacingCamera();
